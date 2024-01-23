@@ -1,0 +1,101 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: ESPE
+  Date: 17/01/2024
+  Time: 8:52
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Añadir Auto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EBF5FB;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+
+        }
+        .form-container {
+            width: 25%;
+            margin: 0 auto;
+            background-color: rgba(3, 162, 162, 0.83);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgba(166, 248, 248, 0.89);
+            cursor: pointer;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Datos del Auto</h1>
+<div class="form-container">
+<form action="servletController" method="post">
+    <input type="hidden" name="opcion" value="crear">
+    <table>
+        <tr>
+            <td>Marca</td>
+            <td><input type="text" name="marca"></td>
+        </tr>
+        <tr>
+            <td>Placa</td>
+            <td><input type="text" name="placa"></td>
+        </tr>
+        <tr>
+            <td>Modelo</td>
+            <td><input type="text" name="modelo"></td>
+        </tr>
+        <tr>
+            <td>Cilindraje</td>
+            <td><input type="text" name="cilindraje"></td>
+        </tr>
+        <tr>
+            <td>Anio</td>
+            <td><input type="text" name="anio"></td>
+        </tr>
+        <tr>
+            <td>Consumo</td>
+            <td><input type="text" name="consumo"></td>
+        </tr>
+    </table>
+    <center><input type="submit" value="Añadir"></center>
+</form>
+</div>
+</body>
+</html>
